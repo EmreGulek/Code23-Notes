@@ -35,9 +35,9 @@ class NoteController extends Controller
 
     public function index()
     {
-
+        $categories = Category::all();
         $notes = Note::where('user_id',Auth::id())->get();
-        return view('panel.note.index',compact('notes'));
+        return view('panel.note.index',compact('notes','categories'));
     }
 
     public function edit($note_id){

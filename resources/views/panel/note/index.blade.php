@@ -12,6 +12,7 @@
                         <table class="table table-striped">
                             <thead>
                             <tr>
+                                <th>Kategori</th>
                                 <th>Not</th>
                                 <th>Note Durumu</th>
                                 <th>Planlanan Zaman</th>
@@ -22,13 +23,18 @@
                             <tbody class="table-border-bottom-0">
                             @foreach($notes as  $note)
                                 <tr id="note-{{ $note->id }}">
+                                    @foreach($categories as $cat)
+                                        @if($cat->id == $note->category_id)
+                                            <td>{{$cat->name}}</td>
+                                        @endif
+                                    @endforeach
                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{$note->content}}</strong></td>
                                     <td>
                                         @if($note->status == 0) <span class="badge bg-label-primary me-1" style="color:darkred">Yapılmadı</span>
                                         @elseif($note->status ==1) <span class="badge bg-label-dark me-1" style="color:royalblue">Yapılıyor</span>
                                         @elseif($note->status ==2) <span class="badge bg-label-secondary me-1" style="color:darkorange">Yapılacak</span>
-                                        @elseif($note->status ==3) <span class="badge bg-label-danger me-1">Ertelendi</span>
-                                        @elseif($note->status ==4) <span class="badge bg-label-success me-1">İptal Edildi</span>
+                                        @elseif($note->status ==3) <span class="badge bg-label-danger me-1">İptal Edildi</span>
+                                        @elseif($note->status ==4) <span class="badge bg-label-success me-1">Ertelendi</span>
                                         @endif
                                     </td>
                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{ \Carbon\Carbon::parse($note->deadline)->diffForHumans() }}</strong>
