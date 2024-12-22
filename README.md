@@ -30,3 +30,9 @@ Jetstream ile kimlik doğrulama yapılmış olup, MySQL veritabanı kullanıldı
 - Composer
 - MySQL veritabanı
 
+<img width="759" alt="login" src="https://github.com/user-attachments/assets/fccd0392-065b-4866-9ab5-44aaeb185683" />
+<img width="1253" alt="homePage" src="https://github.com/user-attachments/assets/956cb2ed-5da7-4324-9cf2-976539c61e74" />
+<img width="1440" alt="notes" src="https://github.com/user-attachments/assets/5549d9fb-761c-48f1-b1be-e11e469cc4b3" />
+<img width="1258" alt="newNote" src="https://github.com/user-attachments/assets/93b30210-571b-4fe9-9dac-5430bf8a1cf3" />
+<img width="1443" alt="categories" src="https://github.com/user-attachments/assets/b0bded21-cc90-48e1-9648-4149c4642183" />
+<img width="1260" alt="newCategory" src="https://github.com/user-attachments/assets/e0b4a1ad-0f60-4d62-a7c3-0f02f69e4447" />
