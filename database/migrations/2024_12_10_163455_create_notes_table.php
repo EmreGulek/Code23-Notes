@@ -13,10 +13,16 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('category_id');
             $table->text('content');
-            $table->string('image')->nullable();
+            $table->tinyInteger('status')->default(0)->comment('0-Yapılmadı, 1-Yapılıyor, 2-Yapılacak , 3-İptalEdildi, 4-Ertelendi');
+            $table->dateTime('deadline')->nullable();
+            $table->softDeletes();
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
+
+
         });
     }
 
